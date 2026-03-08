@@ -1,32 +1,47 @@
-# Kickstart nvimrc
+# CIPH3R's NVIMRC
 
-My Neovim configuration based on LazyVim.
+Minimal Neovim configuration built on top of LazyVim.
 
 ## Requirements
 
-- Neovim ≥ 0.11.2
-- Git
-- Nerd Font
+- **Neovim ≥ 0.11.2**
+- **Git**
+- **Nerd Font**
 
-## Installation
+## Dependencies
 
-Install dependencies:
+Install required tools:
 
 ```bash
-sudo apt update && sudo apt install -y build-essential ripgrep fzf lazygit fd-find
-sudo ln -sf "$(which fdfind)" /usr/local/bin/fd
+sudo apt update
+sudo apt install -y build-essential ripgrep fzf lazygit fd-find
+```
+
+Install Tree-sitter CLI:
+
+```bash
 npm install -g tree-sitter-cli
 ```
 
-Install nvimrc:
+## Installation
+
+Clone the repository directly into the Neovim config directory:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/cipherswami/nvimrc/main/install.sh | bash
+git clone https://github.com/cipherswami/nvimrc ~/.config/nvim
 ```
+
+Start Neovim:
+
+```bash
+nvim
+```
+
+Lazy.nvim will automatically install plugins on first launch.
 
 ## Uninstall
 
-Uninstall nvimrc:
+Remove the configuration and plugin data:
 
 ```bash
 rm -rf ~/.config/nvim ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
@@ -34,4 +49,4 @@ rm -rf ~/.config/nvim ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
